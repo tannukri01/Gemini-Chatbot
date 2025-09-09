@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemini Chatbot</title>
+
+  <!-- Google Fonts (Material Symbols) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="gemini.png" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- App Header -->
+    <header class="app-header">
+      <h1 class="heading">Hello, Gemini!</h1>
+      <h2 class="subheading">How can I help you today?</h2>
+    </header>
+    
+
+    <!-- Suggestion List -->
+    <ul class="suggestion">
+      <li class="suggestion-item">
+        <p class="text">Design a home office setup for remote work</p>
+        <span class="material-symbols-outlined">draw</span>
+      </li>
+      <li class="suggestion-item">
+        <p class="text">How can I level up my web development expertise in 2025?</p>
+        <span class="material-symbols-rounded">lightbulb</span>
+      </li>
+      <li class="suggestion-item">
+        <p class="text">Suggest some useful tools for debugging JavaScript code</p>
+        <span class="material-symbols-rounded">explore</span>
+      </li>
+      <li class="suggestion-item">
+        <p class="text">React JS component for the simple todo list app</p>
+        <span class="material-symbols-rounded">code_blocks</span>
+      </li>
+    </ul>
+
+    <!-- Chats Container -->
+    <main class="chats-container" aria-live="polite">
+      <div class="message user-message">
+        <p class="message-text">Hello, Gemini! Can you help me design a home office setup for remote work?</p>
+      </div>
+
+      <div class="message bot-message">
+        <img src="gemini.png" alt="Gemini Bot" class="avatar" />
+        <p class="message-text">Sure! Here are some tips for designing a home office setup:</p>
+      </div>
+    </main>
+
+    <!-- Prompt Container -->
+    <footer class="prompt-container">
+      <div class="prompt-wrapper">
+        <form id="chat-form" class="prompt-form">
+          <input 
+            id="prompt-input" 
+            type="text" 
+            placeholder="Ask Gemini..." 
+            class="prompt-input" 
+            required
+          />
+
+          <div class="prompt-actions">
+            <div class="file-upload-wrapper">
+              <img id="file-preview" class="file-preview" />
+              <input type="file" accept="image/*, .pdf, .txt, .csv" id="file-input" hidden>
+              <button id="file-icon-btn" type="button" class="file-icon material-symbols-rounded">description</button>
+              <button id="cancel-file-preview-btn" type="button" class="material-symbols-rounded" aria-label="Cancel">close</button>
+            </div>
+
+            <button id="add-file-btn" type="button" class="material-symbols-rounded" aria-label="Attach file">attach_file</button>
+            <button id="cancel-file-btn" type="button" class="material-symbols-rounded" aria-label="Cancel">close</button>
+            <button type="button" id="stop-response-btn" class="material-symbols-rounded" aria-label="Stop response">stop_circle</button>
+            <button id="send-prompt-btn" type="submit" class="material-symbols-rounded" aria-label="Send">arrow_upward</button>
+          </div>
+        </form>
+
+        <!-- Action Buttons -->
+        <button id="theme-toggle-btn" class="material-symbols-rounded" aria-label="Toggle theme" title="Toggle theme">light_mode</button>
+        <button id="delete-chats-btn" class="material-symbols-rounded" aria-label="Delete chats" title="Delete chats">delete</button>
+      </div>
+
+      <p class="disclaimer">
+        Gemini is a prototype and may produce inaccurate information that does not reflect the views of Google. 
+        <a href="#">Learn more</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
