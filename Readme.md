@@ -2,10 +2,18 @@
 
 A simple AI-powered chatbot built with **HTML, CSS, and JavaScript** using the **Google Gemini API**.  
 It supports text input, file uploads, typing animation, and theme switching.
+# Gemini Chatbot
+
+**Live Demo:** [https://gemini-chatbot-nb3n.vercel.app](https://gemini-chatbot-nb3n.vercel.app)
+
+Gemini Chatbot is a **web-based AI assistant** built with HTML, CSS, and JavaScript. It offers a modern chat interface with typing animations, suggestion prompts, file upload previews, and a dark/light theme toggle.  
 
 ---
-![Chat UI](./images/UI.png)
-![Dark Theme](./images/ChatbotUI.png)
+
+## Features
+
+- **AI Responses:** Po
+
 
 
 
