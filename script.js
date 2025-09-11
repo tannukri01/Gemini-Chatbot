@@ -9,7 +9,7 @@ const filePreview = promptForm.querySelector('#file-preview');
 const themeToggle = document.querySelector('#theme-toggle-btn');
 
 // API Config
-const API_KEY = 'AIzaSyBNziXgyvqpL-RognHIo7GMYPG1UMAPK9w';  // Replace with your actual API key
+const API_KEY = 'AIzaSyA0tgSzi5XgXx0_J-8dkNJGrrwJ7M2Htoo';  
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 let typingInterval, controller;
@@ -79,7 +79,7 @@ const generateResponse = async (botMsgDiv) => {
 
     let responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "⚠️ No response";
 
-    // ✅ Formatting fixes
+    //  Formatting fixes
     responseText = responseText
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')  // bold
       .replace(/\n/g, '<br>')                              // line breaks
@@ -117,7 +117,7 @@ const handleFormSubmit = (e) => {
   document.body.classList.add('bot-responding', "chats-active");
   fileUploadWrapper.classList.remove("active", "img-attached", "file-attached");
 
-  // ✅ User message bubble
+  //  User message bubble
   const userMsgHTML = `<p class="message-text"></p>`;
   const userMsgDiv = createMsgElement(userMsgHTML, 'user-message');
 
@@ -125,7 +125,7 @@ const handleFormSubmit = (e) => {
     userMsgDiv.querySelector('.message-text').textContent = userMessage; // Safe
   }
 
-  // ✅ Show file if uploaded
+  //  Show file if uploaded
   if (userData.file.data) {
     if (userData.file.isImage) {
       const imgTag = document.createElement("img");
@@ -143,9 +143,9 @@ const handleFormSubmit = (e) => {
   chatsContainer.appendChild(userMsgDiv);
   scrollToBottom();
 
-  // ✅ Bot placeholder
+  //  Bot placeholder
   setTimeout(() => {
-    const botMsgHTML = `<img src="gemini.png" class="avatar"><p class="message-text">Just a sec...</p>`;
+    const botMsgHTML = `<img src="images/gemini.svg" class="avatar"><p class="message-text">Just a sec...</p>`;
     const botMsgDiv = createMsgElement(botMsgHTML, 'bot-message', 'loading');
     chatsContainer.appendChild(botMsgDiv);
 

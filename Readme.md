@@ -4,8 +4,8 @@ A simple AI-powered chatbot built with **HTML, CSS, and JavaScript** using the *
 It supports text input, file uploads, typing animation, and theme switching.
 
 ---
-![Chat UI](Images/UI.png)
-![Dark Theme](Images/ChatbotUI.png)
+![Chat UI](./images/UI.png)
+![Dark Theme](./images/ChatbotUI.png)
 
 
 

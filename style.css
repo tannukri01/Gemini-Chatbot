@@ -186,19 +186,30 @@ body.chats-active .container :where(.app-header, .suggestion) {
 
 .message {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   align-items: flex-start;
 }
 
 .bot-message .avatar {
-  height: 43px;
   width: 43px;
-  flex-shrink: 0;
-  padding: 6px;
+  height: 43px;
   border-radius: 50%;
   background: var(--secondary-color);
   border: 1px solid var(--secondary-hover-color);
+  flex-shrink: 0;
+  display: flex;              /* center image inside */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;           /* keeps image inside circle */
+  padding: 6px;                 /* remove padding that caused cropping */
 }
+
+.bot-message .avatar img {
+  width: 70%;                 /* scale image */
+  height: 70%;
+  object-fit: contain;        
+}
+
 
 .message .message-text {
   padding: 12px 16px;
@@ -214,6 +225,14 @@ body.chats-active .container :where(.app-header, .suggestion) {
 .chats-container .bot-message.loading .avatar {
   animation: rotate 3s linear infinite;
 }
+.avatar {
+  width: 32px;         /* size of the icon */
+  height: 32px;
+  border-radius: 50%;  /* makes it circular */
+  margin-right: 8px;   /* spacing between icon and text */
+  vertical-align: middle;
+}
+
 .uploaded-img {
   max-width: 200px;
   border-radius: 8px;
