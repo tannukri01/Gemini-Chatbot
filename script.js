@@ -145,7 +145,7 @@ const handleFormSubmit = (e) => {
 
   //  Bot placeholder
   setTimeout(() => {
-    const botMsgHTML = `<img src="images/gemini.svg" class="avatar"><p class="message-text">Just a sec...</p>`;
+    const botMsgHTML = `<img src="./Images/gemini.svg" class="avatar"><p class="message-text">Just a sec...</p>`;
     const botMsgDiv = createMsgElement(botMsgHTML, 'bot-message', 'loading');
     chatsContainer.appendChild(botMsgDiv);
 

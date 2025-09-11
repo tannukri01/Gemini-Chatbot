@@ -32,4 +32,6 @@ Gemini Chatbot is a **web-based AI assistant** built with HTML, CSS, and JavaScr
 - **AI API:** Google Gemini 2.5 Flash  
 
 
+## Live Demo
 
+Check out the project live here: [Gemini Chatbot]()
